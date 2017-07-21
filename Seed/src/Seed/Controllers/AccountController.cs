@@ -7,13 +7,17 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Seed.Models;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Principal;
+using System.Security.Claims;
+using Microsoft.IdentityModel.Tokens;
+using Seed.Auth;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Seed.Controllers
 {
     [Route("api/[controller]")]
-    [Authorize]
     public class AccountController : Controller
     {
         private UserManager<IdentityUser> userManager;
@@ -26,14 +30,17 @@ namespace Seed.Controllers
         }
         // GET: api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        [Authorize("Bearer")]
+        public IActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            var claimsIdentity = User.Identity as ClaimsIdentity;
+
+            return Ok(claimsIdentity.Name);
         }
 
-        // POST api/values
+        // POST api/account
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody]LoginModel loginModel)
+        public async Task<IActionResult> GetAuthToken([FromBody]LoginModel loginModel)
         {
             if (ModelState.IsValid)
             {
@@ -43,16 +50,53 @@ namespace Seed.Controllers
                     await signInManager.SignOutAsync();
                     if ((await signInManager.PasswordSignInAsync(user, loginModel.Password, false, false)).Succeeded)
                     {
-                        return Ok(true);
+                        var requestAt = DateTime.Now;
+                        var expiresIn = requestAt + TokenAuthOption.ExpiresSpan;
+                        var token = GenerateToken(user, expiresIn);
+                        return Ok(new
+                        {
+                            request_at = requestAt,
+                            expires_in = TokenAuthOption.ExpiresSpan.TotalSeconds,
+                            tokey_type = TokenAuthOption.TokenType,
+                            token = token,
+                            username = loginModel.Name
+                        });
                     }
                     else
                     {
-                        return Forbid();
+                        return Forbid("Not valid user");
                     }
                 }
 
             }
-            return BadRequest();
-        }     
+            return BadRequest("Not valid user");
+        }
+
+        private string GenerateToken(IdentityUser user, DateTime expires)
+        {
+            var now = DateTime.UtcNow;
+            DateTimeOffset now2 = now;
+
+            // Specifically add the jti (nonce), iat (issued timestamp), and sub (subject/user) claims.
+            // You can add other claims here, if you want:
+            var claims = new[]
+            {
+                new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(JwtRegisteredClaimNames.Iat,  now2.ToUnixTimeSeconds().ToString(), ClaimValueTypes.Integer64)
+            };
+
+            // Create the JWT and write it to a string
+            var jwt = new JwtSecurityToken(
+                issuer:TokenAuthOption.Issuer,
+                audience: TokenAuthOption.Audience,
+                claims: claims,
+                notBefore: now,
+                expires: now.Add(TokenAuthOption.ExpiresSpan),
+                signingCredentials: TokenAuthOption.SigningCredentials);
+            var encodedJwt = new JwtSecurityTokenHandler().WriteToken(jwt);
+
+            return encodedJwt;
+        }
     }
 }

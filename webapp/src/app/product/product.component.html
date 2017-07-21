@@ -5,3 +5,5 @@
   <h2>{{product.productID}}</h2>
   <p>{{product.name}}</p>
 </div>
+<button (click)="login()" *ngIf="!auth.loggedIn()"> Log In </button>
+<button (click)="login()" *ngIf="auth.loggedIn()"> Log Out </button>

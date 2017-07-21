@@ -1,3 +1,4 @@
+import { AuthModule } from './../auth/auth.module';
 import { ProductService } from './service/product.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -6,7 +7,8 @@ import { HttpModule } from '@angular/http';
 @NgModule({
   imports: [
     CommonModule,
-    HttpModule
+    HttpModule,
+    AuthModule
   ],
   declarations: [ProductComponent],
   providers: [ProductService],

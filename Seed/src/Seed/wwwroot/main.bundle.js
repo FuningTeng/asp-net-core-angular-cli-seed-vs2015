@@ -1,1 +1,493 @@
-webpackJsonp([1],{"+h1B":function(n,u,t){"use strict";var l=t("/oeL"),r=t("aR8+"),c=t("wQAS"),o=t("q4dy"),i=t("qbdv"),e=t("fc+i"),d=t("BkNc"),a=t("CPp0"),f=t("Lg2N"),s=t("vnfH"),p=t("kylg");t.d(u,"a",function(){return v});var v=l.b(r.a,[c.a],function(n){return l.c([l.d(512,l.e,l.f,[[8,[o.a]],[3,l.e],l.g]),l.d(5120,l.h,l.i,[[3,l.h]]),l.d(4608,i.a,i.b,[l.h]),l.d(5120,l.j,l.k,[]),l.d(5120,l.l,l.m,[]),l.d(5120,l.n,l.o,[]),l.d(4608,e.b,e.c,[i.c]),l.d(6144,l.p,null,[e.b]),l.d(4608,e.d,e.e,[]),l.d(5120,e.f,function(n,u,t,l){return[new e.g(n),new e.h(u),new e.i(t,l)]},[i.c,i.c,i.c,e.d]),l.d(4608,e.j,e.j,[e.f,l.q]),l.d(135680,e.k,e.k,[i.c]),l.d(4608,e.l,e.l,[e.j,e.k]),l.d(6144,l.r,null,[e.l]),l.d(6144,e.m,null,[e.k]),l.d(4608,l.s,l.s,[l.q]),l.d(4608,e.n,e.n,[i.c]),l.d(4608,e.o,e.o,[i.c]),l.d(5120,d.a,d.b,[d.c]),l.d(4608,d.d,d.d,[]),l.d(6144,d.e,null,[d.d]),l.d(135680,d.f,d.f,[d.c,l.t,l.u,l.v,d.e]),l.d(4608,d.g,d.g,[]),l.d(5120,d.h,d.i,[d.j]),l.d(5120,l.w,function(n){return[n]},[d.h]),l.d(4608,a.a,a.a,[]),l.d(4608,a.b,a.c,[]),l.d(5120,a.d,a.e,[]),l.d(4608,a.f,a.f,[a.a,a.b,a.d]),l.d(4608,a.g,a.h,[]),l.d(5120,a.i,a.j,[a.f,a.g]),l.d(4608,f.a,f.a,[a.i]),l.d(512,i.d,i.d,[]),l.d(1024,l.x,e.p,[]),l.d(1024,l.y,function(){return[d.k()]},[]),l.d(512,d.j,d.j,[l.v]),l.d(1024,l.z,function(n,u,t){return[e.q(n,u),d.l(t)]},[[2,e.r],[2,l.y],d.j]),l.d(512,l.A,l.A,[[2,l.z]]),l.d(131584,l.B,l.B,[l.q,l.C,l.v,l.x,l.e,l.A]),l.d(2048,l.D,null,[l.B]),l.d(512,l.E,l.E,[l.D]),l.d(512,e.s,e.s,[[3,e.s]]),l.d(1024,d.m,d.n,[[3,d.c]]),l.d(512,d.o,d.p,[]),l.d(512,d.q,d.q,[]),l.d(256,d.r,{},[]),l.d(1024,i.e,d.s,[i.f,[2,i.g],d.r]),l.d(512,i.h,i.h,[i.e]),l.d(512,l.u,l.u,[]),l.d(512,l.t,l.F,[l.u,[2,l.G]]),l.d(1024,d.t,function(){return[[{path:"",children:[]}]]},[]),l.d(1024,d.c,d.u,[l.D,d.o,d.q,i.h,l.v,l.t,l.u,d.t,d.r,[2,d.v],[2,d.w]]),l.d(512,d.x,d.x,[[2,d.m],[2,d.c]]),l.d(512,s.a,s.a,[]),l.d(512,a.k,a.k,[]),l.d(512,p.a,p.a,[]),l.d(512,r.a,r.a,[])])})},0:function(n,u,t){n.exports=t("cDNt")},"7n+k":function(n,u,t){"use strict";function l(n){return i._22(0,[(n()(),i._23(0,null,null,7,"div",[],null,null,null,null,null)),(n()(),i._25(null,["\n  "])),(n()(),i._23(0,null,null,1,"h2",[],null,null,null,null,null)),(n()(),i._25(null,["",""])),(n()(),i._25(null,["\n  "])),(n()(),i._23(0,null,null,1,"p",[],null,null,null,null,null)),(n()(),i._25(null,["",""])),(n()(),i._25(null,["\n"]))],null,function(n,u){n(u,3,0,u.context.$implicit.productID),n(u,6,0,u.context.$implicit.name)})}function r(n){return i._22(0,[(n()(),i._23(0,null,null,1,"p",[],null,null,null,null,null)),(n()(),i._25(null,["\n  product works!\n"])),(n()(),i._25(null,["\n"])),(n()(),i._27(16777216,null,null,1,null,l)),i._24(802816,null,0,e.m,[i._6,i._7,i.l],{ngForOf:[0,"ngForOf"]},null),(n()(),i._25(null,["\n"]))],function(n,u){n(u,4,0,u.component.products)},null)}function c(n){return i._22(0,[(n()(),i._23(0,null,null,1,"app-product",[],null,null,null,r,s)),i._24(114688,null,0,d.a,[a.a],null,null)],function(n,u){n(u,1,0)},null)}var o=t("Yfip"),i=t("/oeL"),e=t("qbdv"),d=t("FJFD"),a=t("Lg2N");t.d(u,"b",function(){return s}),u.a=r;var f=[o.a],s=i._21({encapsulation:0,styles:f,data:{}});i._26("app-product",d.a,c,{},{},[])},FJFD:function(n,u,t){"use strict";var l=t("Lg2N"),r=t("5v8a");t.n(r);t.d(u,"a",function(){return c});var c=function(){function n(n){this._productService=n}return n.prototype.ngOnInit=function(){var n=this;this._productService.getProducts().subscribe(function(u){n.products=u})},n.ctorParameters=function(){return[{type:l.a}]},n}()},Lg2N:function(n,u,t){"use strict";var l=t("CPp0"),r=t("p5Ee"),c=t("5v8a");t.n(c);t.d(u,"a",function(){return o});var o=function(){function n(n){this.http=n,console.log("Product Service Initialized...")}return n.prototype.getProducts=function(){return 0==r.a.production?this.http.get("mock/mock-products.json").map(function(n){return n.json()}):this.http.get("api/product").map(function(n){return n.json()})},n.ctorParameters=function(){return[{type:l.i}]},n}()},NhKt:function(n,u,t){"use strict";t.d(u,"a",function(){return l});var l=[""]},Yfip:function(n,u,t){"use strict";t.d(u,"a",function(){return l});var l=[""]},"aR8+":function(n,u,t){"use strict";t.d(u,"a",function(){return l});var l=function(){function n(){}return n}()},cDNt:function(n,u,t){"use strict";Object.defineProperty(u,"__esModule",{value:!0});var l=t("/oeL"),r=t("p5Ee"),c=t("+h1B"),o=t("fc+i");r.a.production&&t.i(l.a)(),t.i(o.a)().bootstrapModuleFactory(c.a)},kylg:function(n,u,t){"use strict";t.d(u,"a",function(){return l});var l=function(){function n(){}return n}()},p5Ee:function(n,u,t){"use strict";t.d(u,"a",function(){return l});var l={production:!0}},q4dy:function(n,u,t){"use strict";function l(n){return o._22(0,[(n()(),o._23(0,null,null,2,"app-product",[],null,null,null,i.a,i.b)),o._24(114688,null,0,e.a,[d.a],null,null),(n()(),o._25(null,["\n"]))],function(n,u){n(u,1,0)},null)}function r(n){return o._22(0,[(n()(),o._23(0,null,null,1,"app-root",[],null,null,null,l,s)),o._24(49152,null,0,a.a,[],null,null)],null,null)}var c=t("NhKt"),o=t("/oeL"),i=t("7n+k"),e=t("FJFD"),d=t("Lg2N"),a=t("wQAS");t.d(u,"a",function(){return p});var f=[c.a],s=o._21({encapsulation:0,styles:f,data:{}}),p=o._26("app-root",a.a,r,{},{},[])},qtrl:function(n,u){function t(n){throw new Error("Cannot find module '"+n+"'.")}t.keys=function(){return[]},t.resolve=t,n.exports=t,t.id="qtrl"},vnfH:function(n,u,t){"use strict";t.d(u,"a",function(){return l});var l=function(){function n(){}return n}()},wQAS:function(n,u,t){"use strict";t.d(u,"a",function(){return l});var l=function(){function n(){this.title="app"}return n}()}},[0]);
+webpackJsonp([1],{
+
+/***/ "../../../../../src async recursive":
+/***/ (function(module, exports) {
+
+function webpackEmptyContext(req) {
+	throw new Error("Cannot find module '" + req + "'.");
+}
+webpackEmptyContext.keys = function() { return []; };
+webpackEmptyContext.resolve = webpackEmptyContext;
+module.exports = webpackEmptyContext;
+webpackEmptyContext.id = "../../../../../src async recursive";
+
+/***/ }),
+
+/***/ "../../../../../src/app/app-routing.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var routes = [
+    {
+        path: '',
+        children: []
+    }
+];
+var AppRoutingModule = (function () {
+    function AppRoutingModule() {
+    }
+    return AppRoutingModule;
+}());
+AppRoutingModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+        imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* RouterModule */].forRoot(routes)],
+        exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* RouterModule */]]
+    })
+], AppRoutingModule);
+
+//# sourceMappingURL=app-routing.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/app.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/app.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<app-product>\n</app-product>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/app.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var AppComponent = (function () {
+    function AppComponent() {
+        this.title = 'app';
+    }
+    return AppComponent;
+}());
+AppComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-root',
+        template: __webpack_require__("../../../../../src/app/app.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/app.component.css")]
+    })
+], AppComponent);
+
+//# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/app.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__product_product_module__ = __webpack_require__("../../../../../src/app/product/product.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+var AppModule = (function () {
+    function AppModule() {
+    }
+    return AppModule;
+}());
+AppModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["NgModule"])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
+            __WEBPACK_IMPORTED_MODULE_3__app_routing_module__["a" /* AppRoutingModule */],
+            __WEBPACK_IMPORTED_MODULE_0__product_product_module__["a" /* ProductsModule */]
+        ],
+        providers: [],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
+    })
+], AppModule);
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/auth/auth.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__auth_service__ = __webpack_require__("../../../../../src/app/auth/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_jwt__ = __webpack_require__("../../../../angular2-jwt/angular2-jwt.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_jwt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_jwt__);
+/* unused harmony export authHttpServiceFactory */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+function authHttpServiceFactory(http, options) {
+    return new __WEBPACK_IMPORTED_MODULE_4_angular2_jwt__["AuthHttp"](new __WEBPACK_IMPORTED_MODULE_4_angular2_jwt__["AuthConfig"]({
+        tokenName: 'token',
+        tokenGetter: (function () { return localStorage.getItem('token'); }),
+        globalHeaders: [{ 'Content-Type': 'application/json' }],
+    }), http, options);
+}
+var AuthModule = (function () {
+    function AuthModule() {
+    }
+    return AuthModule;
+}());
+AuthModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_2__angular_common__["a" /* CommonModule */]
+        ],
+        providers: [
+            {
+                provide: __WEBPACK_IMPORTED_MODULE_4_angular2_jwt__["AuthHttp"],
+                useFactory: authHttpServiceFactory,
+                deps: [__WEBPACK_IMPORTED_MODULE_3__angular_http__["Http"], __WEBPACK_IMPORTED_MODULE_3__angular_http__["RequestOptions"]]
+            },
+            __WEBPACK_IMPORTED_MODULE_0__auth_service__["a" /* AuthService */]
+        ],
+        declarations: []
+    })
+], AuthModule);
+
+//# sourceMappingURL=auth.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/auth/auth.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_jwt__ = __webpack_require__("../../../../angular2-jwt/angular2-jwt.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_jwt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angular2_jwt__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var AuthService = (function () {
+    function AuthService() {
+    }
+    AuthService.prototype.loggedIn = function () {
+        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_angular2_jwt__["tokenNotExpired"])();
+    };
+    return AuthService;
+}());
+AuthService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [])
+], AuthService);
+
+//# sourceMappingURL=auth.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/product/product.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/product/product.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  product works!\n</p>\n<div *ngFor=\"let product of products\">\n  <h2>{{product.productID}}</h2>\n  <p>{{product.name}}</p>\n</div>\n<button (click)=\"login()\" *ngIf=\"!auth.loggedIn()\"> Log In </button>\n<button (click)=\"login()\" *ngIf=\"auth.loggedIn()\"> Log Out </button>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/product/product.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__auth_auth_service__ = __webpack_require__("../../../../../src/app/auth/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_product_service__ = __webpack_require__("../../../../../src/app/product/service/product.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var ProductComponent = (function () {
+    function ProductComponent(_productService, _auth) {
+        this._productService = _productService;
+        this.auth = _auth;
+    }
+    ProductComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this._productService.getProducts().subscribe(function (prds) {
+            _this.products = prds;
+        });
+    };
+    ProductComponent.prototype.login = function () {
+        var _this = this;
+        this._productService.login().subscribe(function (data) {
+            console.log(data);
+            if (data.status == 200) {
+                _this.authResponse = JSON.parse(data._body);
+                localStorage.setItem('token', _this.authResponse.token);
+                var logined = _this.auth.loggedIn();
+                console.log(logined);
+                _this._productService.getUserName().subscribe(function (d) {
+                    console.log(d);
+                });
+            }
+        }, function (err) { return console.log(err); }, function () { return console.log('Request Complete'); });
+    };
+    return ProductComponent;
+}());
+ProductComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
+        selector: 'app-product',
+        template: __webpack_require__("../../../../../src/app/product/product.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/product/product.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__service_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_product_service__["a" /* ProductService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__auth_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__auth_auth_service__["a" /* AuthService */]) === "function" && _b || Object])
+], ProductComponent);
+
+var _a, _b;
+//# sourceMappingURL=product.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/product/product.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__auth_auth_module__ = __webpack_require__("../../../../../src/app/auth/auth.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_product_service__ = __webpack_require__("../../../../../src/app/product/service/product.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__product_component__ = __webpack_require__("../../../../../src/app/product/product.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductsModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+var ProductsModule = (function () {
+    function ProductsModule() {
+    }
+    return ProductsModule;
+}());
+ProductsModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["NgModule"])({
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_3__angular_common__["a" /* CommonModule */],
+            __WEBPACK_IMPORTED_MODULE_5__angular_http__["HttpModule"],
+            __WEBPACK_IMPORTED_MODULE_0__auth_auth_module__["a" /* AuthModule */]
+        ],
+        declarations: [__WEBPACK_IMPORTED_MODULE_4__product_component__["a" /* ProductComponent */]],
+        providers: [__WEBPACK_IMPORTED_MODULE_1__service_product_service__["a" /* ProductService */]],
+        exports: [__WEBPACK_IMPORTED_MODULE_4__product_component__["a" /* ProductComponent */]]
+    })
+], ProductsModule);
+
+//# sourceMappingURL=product.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/product/service/product.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_jwt__ = __webpack_require__("../../../../angular2-jwt/angular2-jwt.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_jwt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_jwt__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var ProductService = (function () {
+    function ProductService(http, authHttp) {
+        this.http = http;
+        this.authHttp = authHttp;
+        console.log('Product Service Initialized...');
+    }
+    ProductService.prototype.getProducts = function () {
+        if (false == __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].production) {
+            return this.http.get('api/product').map(function (res) { return res.json(); });
+        }
+        else {
+            return this.http.get('mock/mock-products.json').map(function (res) { return res.json(); });
+        }
+    };
+    ProductService.prototype.login = function () {
+        var myHeader = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        myHeader.append('Content-Type', 'application/json');
+        if (false == __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].production) {
+            return this.http.post('api/account', { name: 'Admin', password: 'Secret123$' }, { headers: myHeader });
+        }
+        else {
+            return this.http.get('mock/mock-products.json').map(function (res) { return res.json(); });
+        }
+    };
+    ProductService.prototype.getUserName = function () {
+        return this.authHttp.get('api/account').map(function (res) { return res.json(); });
+    };
+    return ProductService;
+}());
+ProductService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4_angular2_jwt__["AuthHttp"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_angular2_jwt__["AuthHttp"]) === "function" && _b || Object])
+], ProductService);
+
+var _a, _b;
+//# sourceMappingURL=product.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/environments/environment.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
+// The file contents for the current environment will overwrite these during build.
+// The build system defaults to the dev environment which uses `environment.ts`, but if you do
+// `ng build --env=prod` then `environment.prod.ts` will be used instead.
+// The list of which env maps to which file can be found in `.angular-cli.json`.
+// The file contents for the current environment will overwrite these during build.
+var environment = {
+    production: false
+};
+//# sourceMappingURL=environment.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/main.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("../../../platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("../../../../../src/app/app.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
+
+
+
+
+if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["enableProdMode"])();
+}
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 0:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("../../../../../src/main.ts");
+
+
+/***/ })
+
+},[0]);
+//# sourceMappingURL=main.bundle.js.map
