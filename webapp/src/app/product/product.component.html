@@ -1,9 +1,10 @@
-<p>
-  product works!
+<p *ngIf="user">
+  <span>{{user.id}}</span> <br>
+  <span>{{user.userName}}</span>
 </p>
 <div *ngFor="let product of products">
   <h2>{{product.productID}}</h2>
   <p>{{product.name}}</p>
 </div>
 <button (click)="login()" *ngIf="!auth.loggedIn()"> Log In </button>
-<button (click)="login()" *ngIf="auth.loggedIn()"> Log Out </button>
+<button (click)="logout()" *ngIf="auth.loggedIn()"> Log Out </button>

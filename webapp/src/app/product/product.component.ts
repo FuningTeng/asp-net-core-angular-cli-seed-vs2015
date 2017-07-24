@@ -1,3 +1,4 @@
+import { User } from './model/user';
 import { AuthService } from './../auth/auth.service';
 import { AuthResponse } from './../auth/auth-response';
 import { Product } from './model/product';
@@ -14,36 +15,49 @@ export class ProductComponent implements OnInit {
   products: Product[];
   authResponse: AuthResponse;
   auth: AuthService;
-  userName: string;
+  user: User;
   constructor(private _productService: ProductService, _auth: AuthService) {
     this.auth = _auth;
   }
-
-  ngOnInit() {
+  getProducts() {
     this._productService.getProducts().subscribe(
       prds => {
         this.products = prds;
       }
     );
   }
+  getUser() {
+    this._productService.getUser().subscribe(
+      usr => {
+        this.user = usr;
+      }
+    );
+  }
+  ngOnInit() {
+    if (this.auth.loggedIn()) {
+      this.getProducts();
+      this.getUser();
+    }
+  }
   login() {
     this._productService.login().subscribe(
       data => {
-        console.log(data)
-        if (data.status == 200) {
-          this.authResponse = JSON.parse(data._body);
-          localStorage.setItem('token', this.authResponse.token);
-          var logined = this.auth.loggedIn();
-          console.log(logined);
-          this._productService.getUserName().subscribe(d=>
-            {
-              console.log(d);
-            }
-          );
-        }
+        this.authResponse = data;
+        localStorage.setItem('token', this.authResponse.token);
+        var logined = this.auth.loggedIn();
+        console.log(logined);
+        this.getProducts();
+        this.getUser();
       },
       err => console.log(err),
       () => console.log('Request Complete')
     );
+  }
+  logout() {
+    localStorage.clear();
+    var logined = this.auth.loggedIn();
+    console.log(logined);
+    this.products = null;
+    this.user = null;
   }
 }

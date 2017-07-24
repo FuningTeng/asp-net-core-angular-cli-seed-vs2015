@@ -8,22 +8,30 @@ using Seed.Repository;
 using System.Net.Http;
 using System.Net;
 using System.Threading;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace Seed.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize("Bearer")]
     public class ProductController : Controller
     {
         private IProductRepository productRepository;
-        public ProductController(IProductRepository repo)
+        private UserManager<IdentityUser> userManager;
+        public ProductController(UserManager<IdentityUser> userMgr, IProductRepository repo)
         {
             productRepository = repo;
+            userManager = userMgr;
         }
 
         // GET api/product
         [HttpGet]
         public async Task<IActionResult> Get(CancellationToken token)
-        {
+        {       
             var products = productRepository.Products.ToList(token);
             if (await products != null)
             {

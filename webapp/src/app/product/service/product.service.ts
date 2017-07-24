@@ -11,23 +11,30 @@ export class ProductService {
 
   constructor(private http: Http, private authHttp: AuthHttp) { console.log('Product Service Initialized...'); }
   getProducts() {
-    if (false == environment.production) {
-      return this.http.get('api/product').map(res => res.json());
-    } else {
+    if (false == environment.auth) {
       return this.http.get('mock/mock-products.json').map(res => res.json());
+    } else {
+      return this.authHttp.get('api/product').map(res => res.json());
+    }
+  }
+  getUser() {
+    if (false == environment.auth) {
+      return this.http.get('mock/mock-products.json').map(res => res.json());
+    } else {
+      return this.authHttp.get('api/account').map(res => res.json());
     }
   }
   login() {
     let myHeader = new Headers();
     myHeader.append('Content-Type', 'application/json');
 
-    if (false == environment.production) {
-      return this.http.post('api/account', { name: 'Admin', password: 'Secret123$' }, { headers: myHeader });
-    } else {
+    if (false == environment.auth) {
       return this.http.get('mock/mock-products.json').map(res => res.json());
+    } else {
+      return this.http.post('api/account', { name: 'Admin', password: 'Secret123$' }, { headers: myHeader }).map(res => res.json());
     }
   }
-  getUserName(){
+  getUserName() {
     return this.authHttp.get('api/account').map(res => res.json());
   }
 }

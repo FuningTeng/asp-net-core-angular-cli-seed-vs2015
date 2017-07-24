@@ -264,7 +264,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/product/product.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  product works!\n</p>\n<div *ngFor=\"let product of products\">\n  <h2>{{product.productID}}</h2>\n  <p>{{product.name}}</p>\n</div>\n<button (click)=\"login()\" *ngIf=\"!auth.loggedIn()\"> Log In </button>\n<button (click)=\"login()\" *ngIf=\"auth.loggedIn()\"> Log Out </button>\n"
+module.exports = "<p *ngIf=\"user\">\n  <span>{{user.id}}</span> <br>\n  <span>{{user.userName}}</span>\n</p>\n<div *ngFor=\"let product of products\">\n  <h2>{{product.productID}}</h2>\n  <p>{{product.name}}</p>\n</div>\n<button (click)=\"login()\" *ngIf=\"!auth.loggedIn()\"> Log In </button>\n<button (click)=\"logout()\" *ngIf=\"auth.loggedIn()\"> Log Out </button>\n"
 
 /***/ }),
 
@@ -296,26 +296,41 @@ var ProductComponent = (function () {
         this._productService = _productService;
         this.auth = _auth;
     }
-    ProductComponent.prototype.ngOnInit = function () {
+    ProductComponent.prototype.getProducts = function () {
         var _this = this;
         this._productService.getProducts().subscribe(function (prds) {
             _this.products = prds;
         });
     };
+    ProductComponent.prototype.getUser = function () {
+        var _this = this;
+        this._productService.getUser().subscribe(function (usr) {
+            _this.user = usr;
+        });
+    };
+    ProductComponent.prototype.ngOnInit = function () {
+        if (this.auth.loggedIn()) {
+            this.getProducts();
+            this.getUser();
+        }
+    };
     ProductComponent.prototype.login = function () {
         var _this = this;
         this._productService.login().subscribe(function (data) {
-            console.log(data);
-            if (data.status == 200) {
-                _this.authResponse = JSON.parse(data._body);
-                localStorage.setItem('token', _this.authResponse.token);
-                var logined = _this.auth.loggedIn();
-                console.log(logined);
-                _this._productService.getUserName().subscribe(function (d) {
-                    console.log(d);
-                });
-            }
+            _this.authResponse = data;
+            localStorage.setItem('token', _this.authResponse.token);
+            var logined = _this.auth.loggedIn();
+            console.log(logined);
+            _this.getProducts();
+            _this.getUser();
         }, function (err) { return console.log(err); }, function () { return console.log('Request Complete'); });
+    };
+    ProductComponent.prototype.logout = function () {
+        localStorage.clear();
+        var logined = this.auth.loggedIn();
+        console.log(logined);
+        this.products = null;
+        this.user = null;
     };
     return ProductComponent;
 }());
@@ -411,21 +426,29 @@ var ProductService = (function () {
         console.log('Product Service Initialized...');
     }
     ProductService.prototype.getProducts = function () {
-        if (false == __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].production) {
-            return this.http.get('api/product').map(function (res) { return res.json(); });
+        if (false == __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].auth) {
+            return this.http.get('mock/mock-products.json').map(function (res) { return res.json(); });
         }
         else {
+            return this.authHttp.get('api/product').map(function (res) { return res.json(); });
+        }
+    };
+    ProductService.prototype.getUser = function () {
+        if (false == __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].auth) {
             return this.http.get('mock/mock-products.json').map(function (res) { return res.json(); });
+        }
+        else {
+            return this.authHttp.get('api/account').map(function (res) { return res.json(); });
         }
     };
     ProductService.prototype.login = function () {
         var myHeader = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         myHeader.append('Content-Type', 'application/json');
-        if (false == __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].production) {
-            return this.http.post('api/account', { name: 'Admin', password: 'Secret123$' }, { headers: myHeader });
+        if (false == __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].auth) {
+            return this.http.get('mock/mock-products.json').map(function (res) { return res.json(); });
         }
         else {
-            return this.http.get('mock/mock-products.json').map(function (res) { return res.json(); });
+            return this.http.post('api/account', { name: 'Admin', password: 'Secret123$' }, { headers: myHeader }).map(function (res) { return res.json(); });
         }
     };
     ProductService.prototype.getUserName = function () {
@@ -454,7 +477,8 @@ var _a, _b;
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 // The file contents for the current environment will overwrite these during build.
 var environment = {
-    production: false
+    production: false,
+    auth: true
 };
 //# sourceMappingURL=environment.js.map
 

@@ -12,6 +12,7 @@ using System.Security.Principal;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
 using Seed.Auth;
+using System.Threading;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -31,11 +32,19 @@ namespace Seed.Controllers
         // GET: api/values
         [HttpGet]
         [Authorize("Bearer")]
-        public IActionResult Get()
+        public async Task<IActionResult> Get(CancellationToken token)
         {
             var claimsIdentity = User.Identity as ClaimsIdentity;
-
-            return Ok(claimsIdentity.Name);
+            var id = claimsIdentity.Claims
+                .FirstOrDefault(r => r.Type == JwtRegisteredClaimNames.Jti)?.Value;
+            IdentityUser user = await userManager.FindByIdAsync(id);
+            return Ok(
+                new
+                {
+                    id = user.Id,
+                    userName = user.UserName
+                }
+            );
         }
 
         // POST api/account
@@ -59,7 +68,8 @@ namespace Seed.Controllers
                             expires_in = TokenAuthOption.ExpiresSpan.TotalSeconds,
                             tokey_type = TokenAuthOption.TokenType,
                             token = token,
-                            username = loginModel.Name
+                            username = loginModel.Name,
+                            userid = user.Id
                         });
                     }
                     else
@@ -82,13 +92,13 @@ namespace Seed.Controllers
             var claims = new[]
             {
                 new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(JwtRegisteredClaimNames.Jti, user.Id),
                 new Claim(JwtRegisteredClaimNames.Iat,  now2.ToUnixTimeSeconds().ToString(), ClaimValueTypes.Integer64)
             };
 
             // Create the JWT and write it to a string
             var jwt = new JwtSecurityToken(
-                issuer:TokenAuthOption.Issuer,
+                issuer: TokenAuthOption.Issuer,
                 audience: TokenAuthOption.Audience,
                 claims: claims,
                 notBefore: now,

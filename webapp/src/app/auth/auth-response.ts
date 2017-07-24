@@ -4,4 +4,5 @@ export class AuthResponse {
     tokey_type: string;
     token: string;
     username: string;
+    userid: string;
 }
